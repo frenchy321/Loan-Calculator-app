@@ -21,8 +21,8 @@ function calculateResults(e) {
 
   // COMPUTE MONTHLY PAYMENTS
   const x = Math.pow(1 + calculatedInterest, calculatedPayments);
-  const monthly = (principal * x * calculatedInterest) / (x - 1);
 
+  const monthly = (principal * x * calculatedInterest) / (x - 1);
   if (isFinite(monthly)) {
     monthlyPayment.value = monthly.toFixed(2);
     totalPayment.value = (monthly * calculatedPayments).toFixed(2);
@@ -44,7 +44,7 @@ function showError(error) {
   const heading = document.querySelector(".heading");
 
   // ADD CLASS
-  errorDiv.className = "alert alert danger";
+  errorDiv.className = "alert alert-danger";
 
   // CREATE TEXT NODE AND APPEND TO ERRORDIV
   errorDiv.appendChild(document.createTextNode(error));
