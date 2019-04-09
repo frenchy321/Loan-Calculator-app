@@ -34,5 +34,21 @@ function calculateResults(e) {
   e.preventDefault();
 }
 
+// SHOW ERROR
+function showError(error) {
+  // CREATE DIV
+  const errorDiv = document.createElement("div");
 
+  // GET ELEMENTS
+  const card = document.querySelector(".card");
+  const heading = document.querySelector(".heading");
+
+  // ADD CLASS
+  errorDiv.className = "alert alert danger";
+
+  // CREATE TEXT NODE AND APPEND TO ERRORDIV
+  errorDiv.appendChild(document.createTextNode(error));
+
+  // INSERT ERROR ABOVE HEADING
+  card.insertBefore(errorDiv, heading);
 }
